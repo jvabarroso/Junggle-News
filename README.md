@@ -1,2 +1,2 @@
-# G2-noticias
+# Junggle News
 Site de notícias usando Python
