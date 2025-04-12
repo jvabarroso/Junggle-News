@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Adicione sua notícia</h1>
+<br>
+<br>
+<h3>Dados da notícia</h3>
+
+
+    <form action="{{url_for('addNoticia')}}" method="POST">
+        <div class="form-group">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" required>
+        </div>
+
+        <div class="form-group">
+            <label for="nascimento">Autor(a):</label>
+            <input type="text" id="autor" name="autor" required>
+        </div>
+
+        <div class="form-group">
+            <label for="sexo">Categorias:</label>
+            <select id="categoria" name="categoria" required>
+                <option value="">Selecione</option>
+                <option value="politica">Política</option>
+                <option value="economia">Economia</option>
+                <option value="esportes">Esporte</option>
+                <option value="tecnologia">Tecnologia</option>
+                <option value="cultura">Cultura</option>
+                <option value="saude">Saúde</option>
+                <option value="educacao">Educação</option>
+                <option value="meio-ambiente">Meio Ambiente</option>
+                <option value="entreterimento">entreterimento</option>
+                <option value="ciência">Ciência</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Descrição:</label>
+            <input type="text" id="descricao" name="descricao" required>
+        </div>
+
+        <div class="form-group">
+            <label for="comentario">Notícia:</label>
+            <textarea id="noticia" name="noticia" required></textarea>
+        </div>
+
+        <button type="submit">Enviar Notícia</button>
+    </form>
+{% endblock content %}

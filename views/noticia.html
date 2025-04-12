@@ -1,21 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{%extends 'base.html'%}
+{%block content%}
     <link rel="stylesheet" href="../css/noticia.css" />
-    <title>Jungle News</title>
-  </head>
-  <body>
-    <header>
-      <div class="container header-content">
-        <h1 class="logo">Jungle News</h1>
-        <nav>
-          <a href="#">Minhas Notícias</a>
-          <a href="#">Feedback</a>
-        </nav>
-      </div>
-    </header>
 
     <main class="container">
       <img
@@ -114,6 +99,7 @@
               placeholder="Add a public comment..."
               class="comment-field"
             />
+            <input type="submit">
           </div>
         </div>
 
@@ -171,9 +157,4 @@
         </div>
       </section>
     </main>
-
-    <footer>
-      <p><strong>junglenews</strong> 2020 copyright all rights reserved</p>
-    </footer>
-  </body>
-</html>
+    {%endblock content%}
