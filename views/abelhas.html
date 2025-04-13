@@ -1,0 +1,52 @@
+{% extends 'base.html' %} 
+{% block content %}
+<article class="news-article">
+    <header class="article-header">
+        <h1>Nova Espécie de Abelha Descoberta na Mata Atlântica</h1>
+        <div class="article-meta">
+            <span class="author">Por Dra. Maria Oliveira</span>
+            <span class="date">10 de Abril, 2024</span>
+            <span class="category">Biologia</span>
+        </div>
+    </header>
+
+    <div class="article-image">
+        <img src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Nova espécie de abelha">
+        <p class="image-caption">A nova espécie de abelha encontrada na Mata Atlântica</p>
+    </div>
+
+    <div class="article-content">
+        <p class="lead">Pesquisadores brasileiros identificaram uma nova espécie de abelha nativa na Mata Atlântica, com características únicas de polinização que podem revolucionar a agricultura sustentável.</p>
+
+        <h2>A Descoberta</h2>
+        <p>Durante um estudo sobre polinização em cultivos orgânicos, cientistas do Instituto de Biologia da USP encontraram uma população de abelhas com características morfológicas distintas. Após dois anos de pesquisa, confirmou-se tratar-se de uma nova espécie.</p>
+
+        <h2>Características Especiais</h2>
+        <p>A nova espécie, batizada de Melipona atlanticus, apresenta características notáveis:</p>
+        <ul>
+            <li>Maior eficiência na polinização de cultivos específicos</li>
+            <li>Resistência natural a pragas comuns</li>
+            <li>Comportamento social único</li>
+        </ul>
+
+        <h2>Importância Ecológica</h2>
+        <p>Esta descoberta é particularmente importante pois a nova espécie demonstra uma adaptação especial para polinizar plantas nativas da Mata Atlântica, muitas delas ameaçadas de extinção.</p>
+
+        <blockquote>
+            "A descoberta desta nova espécie de abelha é um lembrete da importância de preservarmos a Mata Atlântica. Cada espécie tem um papel crucial no ecossistema."
+            <footer>- Dr. João Silva, Entomologista</footer>
+        </blockquote>
+
+        <h2>Implicações para a Agricultura</h2>
+        <p>Os pesquisadores estão estudando como esta nova espécie pode ser utilizada na polinização de cultivos agrícolas, potencialmente reduzindo a dependência de pesticidas e aumentando a produtividade de forma sustentável.</p>
+    </div>
+
+    <div class="article-comments">
+        <h3>Comentários</h3>
+        <form action="#" method="POST" class="comment-form">
+            <textarea name="comentario" placeholder="Deixe seu comentário..." required></textarea>
+            <button type="submit" class="comment-button">Enviar Comentário</button>
+        </form>
+    </div>
+</article>
+{% endblock content %} 

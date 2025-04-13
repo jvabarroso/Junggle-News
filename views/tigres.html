@@ -1,0 +1,51 @@
+{% extends 'base.html' %} 
+{% block content %}
+<article class="news-article">
+    <header class="article-header">
+        <h1>Programa de Conservação de Tigres Mostra Primeiros Resultados Positivos</h1>
+        <div class="article-meta">
+            <span class="author">Por Dr. Carlos Mendes</span>
+            <span class="date">15 de Abril, 2024</span>
+            <span class="category">Conservação</span>
+        </div>
+    </header>
+
+    <div class="article-image">
+        <img src="https://images.unsplash.com/photo-1541959833400-049d37f98ccd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Tigre em seu habitat natural">
+        <p class="image-caption">Tigre monitorado pelo programa de conservação</p>
+    </div>
+
+    <div class="article-content">
+        <p class="lead">Após cinco anos de implementação, o programa de conservação de tigres na Ásia mostra aumento significativo na população de tigres selvagens, marcando uma importante vitória na luta contra a extinção da espécie.</p>
+
+        <h2>O Programa</h2>
+        <p>Iniciado em 2019, o programa "Tigres para Sempre" envolve 13 países asiáticos e tem como objetivo dobrar a população de tigres selvagens até 2030. Os primeiros resultados mostram um aumento de 15% na população total.</p>
+
+        <h2>Principais Conquistas</h2>
+        <ul>
+            <li>Aumento de 40% na população de tigres na Índia</li>
+            <li>Redução de 60% na caça ilegal</li>
+            <li>Restauração de 100.000 hectares de habitat natural</li>
+        </ul>
+
+        <h2>Desafios Superados</h2>
+        <p>O programa enfrentou diversos desafios, incluindo conflitos com comunidades locais e a expansão urbana. Através de educação ambiental e desenvolvimento sustentável, foi possível criar uma coexistência harmoniosa.</p>
+
+        <blockquote>
+            "O sucesso deste programa mostra que é possível reverter a tendência de extinção quando há compromisso internacional e envolvimento das comunidades locais."
+            <footer>- Dra. Ana Santos, Coordenadora do Programa</footer>
+        </blockquote>
+
+        <h2>Próximos Passos</h2>
+        <p>Os pesquisadores planejam expandir o programa para novas áreas e implementar tecnologias de monitoramento mais avançadas, incluindo drones e câmeras de alta resolução para melhor acompanhamento dos tigres.</p>
+    </div>
+
+    <div class="article-comments">
+        <h3>Comentários</h3>
+        <form action="#" method="POST" class="comment-form">
+            <textarea name="comentario" placeholder="Deixe seu comentário..." required></textarea>
+            <button type="submit" class="comment-button">Enviar Comentário</button>
+        </form>
+    </div>
+</article>
+{% endblock content %} 

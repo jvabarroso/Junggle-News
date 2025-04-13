@@ -1,38 +1,96 @@
 {% extends 'base.html' %} {% block content %}
-<div
-  style="background-color: rgb(235, 235, 235); width: 100%; height: 500px"
-></div>
+<div class="hero-banner">
+  <div class="hero-content">
+    <h1>Junggle News</h1>
+    <p class="hero-subtitle">Sua fonte confiável de notícias atualizadas</p>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-number">+1000</span>
+        <span class="stat-label">Notícias Publicadas</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">24/7</span>
+        <span class="stat-label">Atualização Contínua</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">+10</span>
+        <span class="stat-label">Categorias</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<section class="mascot-section">
+    <div class="mascot-container">
+        <div class="mascot-content">
+            <h2>Conheça o Junggle</h2>
+            <p>Nosso mascote representa a busca por conhecimento e a doçura da informação. Assim como um urso busca mel, nós buscamos as melhores notícias para você!</p>
+        </div>
+        <div class="mascot-image">
+            <img src="/imgs/bear.png" alt="Urso Junggle" class="bear-image">
+        </div>
+    </div>
+</section>
+
+<section class="about-section">
+  <div class="about-content">
+    <h2>Sobre Nós</h2>
+    <p>
+      O Junggle News nasceu da necessidade de trazer notícias relevantes e
+      confiáveis para nossos leitores. Nossa missão é informar com precisão,
+      ética e transparência, mantendo você sempre atualizado sobre os
+      acontecimentos mais importantes do Brasil e do mundo.
+    </p>
+    <div class="about-features">
+      <div class="feature">
+        <i class="feature-icon">📰</i>
+        <h3>Notícias Atualizadas</h3>
+        <p>Mantenha-se informado com nossas atualizações em tempo real</p>
+      </div>
+      <div class="feature">
+        <i class="feature-icon">🔍</i>
+        <h3>Análise Profunda</h3>
+        <p>Conteúdo detalhado e análises especializadas</p>
+      </div>
+      <div class="feature">
+        <i class="feature-icon">💬</i>
+        <h3>Comunidade Ativa</h3>
+        <p>Participe das discussões e compartilhe sua opinião</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <main>
+  <h2 class="section-title">Últimas Notícias</h2>
   <div>
     <div class="card">
       <img
-        src="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2022/03/220317141423-01-horridus-triceratops-australia.jpg?w=1200&h=1200&crop=1"
-        alt="Notícia em destaque"
+        src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+        alt="Nova espécie de abelha"
         class="card-image"
       />
       <div class="card-content">
-        <h3 class="card-title">Notícia em Destaque</h3>
+        <h3 class="card-title">Nova Espécie de Abelha Descoberta na Mata Atlântica</h3>
         <p class="card-text">
-          Confira nossa matéria exclusiva sobre os últimos acontecimentos na
-          região. Uma análise detalhada com informações relevantes.
+          Pesquisadores brasileiros identificaram uma nova espécie de abelha nativa na Mata Atlântica, com características únicas de polinização que podem revolucionar a agricultura sustentável.
         </p>
-        <a href="/noticia" class="card-button">Ler Notícia</a>
+        <a href="/abelhas" class="card-button">Ler Notícia</a>
       </div>
     </div>
     <div class="card">
       <img
-        src="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2022/03/220317141423-01-horridus-triceratops-australia.jpg?w=1200&h=1200&crop=1"
-        alt="Notícia em destaque"
+        src="https://images.unsplash.com/photo-1541959833400-049d37f98ccd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+        alt="Tigre em seu habitat natural"
         class="card-image"
       />
       <div class="card-content">
-        <h3 class="card-title">Notícia em Destaque</h3>
+        <h3 class="card-title">Programa de Conservação de Tigres Mostra Primeiros Resultados Positivos</h3>
         <p class="card-text">
-          Confira nossa matéria exclusiva sobre os últimos acontecimentos na
-          região. Uma análise detalhada com informações relevantes.
+          Após cinco anos de implementação, o programa de conservação de tigres na Ásia mostra aumento significativo na população de tigres selvagens, marcando uma importante vitória na luta contra a extinção da espécie.
         </p>
-        <a href="/noticia" class="card-button">Ler Notícia</a>
+        <a href="/tigres" class="card-button">Ler Notícia</a>
       </div>
     </div>
   </div>
@@ -40,32 +98,16 @@
   <div>
     <div class="card">
       <img
-        src="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2022/03/220317141423-01-horridus-triceratops-australia.jpg?w=1200&h=1200&crop=1"
-        alt="Notícia em destaque"
+        src="../imgs/lobo-terrivel.jpg"
+        alt="Lobo Terrível"
         class="card-image"
       />
       <div class="card-content">
-        <h3 class="card-title">Notícia em Destaque</h3>
+        <h3 class="card-title">Descoberta Nova Espécie de Lobo Terrível na América do Sul</h3>
         <p class="card-text">
-          Confira nossa matéria exclusiva sobre os últimos acontecimentos na
-          região. Uma análise detalhada com informações relevantes.
+          Uma equipe de paleontólogos brasileiros fez uma descoberta extraordinária: fósseis de uma nova espécie de Lobo Terrível (Canis dirus) na região da Amazônia brasileira.
         </p>
-        <a href="/noticia" class="card-button">Ler Notícia</a>
-      </div>
-    </div>
-    <div class="card">
-      <img
-        src="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2022/03/220317141423-01-horridus-triceratops-australia.jpg?w=1200&h=1200&crop=1"
-        alt="Notícia em destaque"
-        class="card-image"
-      />
-      <div class="card-content">
-        <h3 class="card-title">Notícia em Destaque</h3>
-        <p class="card-text">
-          Confira nossa matéria exclusiva sobre os últimos acontecimentos na
-          região. Uma análise detalhada com informações relevantes.
-        </p>
-        <a href="/noticia" class="card-button">Ler Notícia</a>
+        <a href="/lobo-terrivel" class="card-button">Ler Notícia</a>
       </div>
     </div>
   </div>

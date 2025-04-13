@@ -1,43 +1,39 @@
 {% extends 'base.html' %}
 {% block content %}
-    <form action="{{url_for('feedback')}}" method="POST">
-        <div class="form-group">
-            <label for="nome">Nome Completo:</label>
-            <input type="text" id="nome" name="nome" required>
-        </div>
+    <div class="feedback-container">
+        <h1 class="feedback-title">Envie seu Feedback</h1>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
 
-        <div class="form-group">
-            <label for="nascimento">Data de Nascimento:</label>
-            <input type="date" id="nascimento" name="nascimento" required>
-        </div>
+            <div class="form-group">
+                <label for="nascimento">Data de Nascimento:</label>
+                <input type="date" id="nascimento" name="nascimento" required>
+            </div>
 
-        <div class="form-group">
-            <label for="sexo">Sexo:</label>
-            <select id="sexo" name="sexo" required>
-                <option value="">Selecione</option>
-                <option value="masculino">Masculino</option>
-                <option value="feminino">Feminino</option>
-                <option value="outro">Outro</option>
-            </select>
-        </div>
+            <div class="form-group">
+                <label for="sexo">Sexo:</label>
+                <select id="sexo" name="sexo" required>
+                    <option value="">Selecione</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </div>
 
-        <div class="form-group">
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
 
-        <div class="form-group">
-            <label for="comentario">Comentário:</label>
-            <textarea id="comentario" name="comentario" required></textarea>
-        </div>
+            <div class="form-group">
+                <label for="comentario">Comentário:</label>
+                <textarea id="comentario" name="comentario" required></textarea>
+            </div>
 
-        <button type="submit">Enviar Feedback</button>
-    </form>
-
-    <hr>
-
-    {%for dados in feedbacks%}
-    Comentário<b>{dados.Comentário}</b>
-    {%endfor%}
-
+            <button type="submit" class="feedback-button">Enviar Feedback</button>
+        </form>
+    </div>
 {% endblock content %}

@@ -19,6 +19,18 @@ def init_app(app):
     def home():
         return render_template('index.html', method=['GET', 'POST'])
     
+    @app.route('/abelhas')
+    def abelhas():
+        return render_template('abelhas.html')
+    
+    @app.route('/tigres')
+    def tigres():
+        return render_template('tigres.html')
+    
+    @app.route('/lobo-terrivel')
+    def lobo_terrivel():
+        return render_template('noticia.html')
+    
     @app.route('/noticia')
     def noticia():
         dadosComentarios = comentarios[0]

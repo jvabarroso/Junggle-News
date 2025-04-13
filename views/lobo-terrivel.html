@@ -1,0 +1,52 @@
+{% extends 'base.html' %} 
+{% block content %}
+<article class="news-article">
+    <header class="article-header">
+        <h1>Descoberta Nova Espécie de Lobo Terrível na América do Sul</h1>
+        <div class="article-meta">
+            <span class="author">Por Dr. Carlos Silva</span>
+            <span class="date">12 de Abril, 2024</span>
+            <span class="category">Paleontologia</span>
+        </div>
+    </header>
+
+    <div class="article-image">
+        <img src="../imgs/lobo-terrivel.jpg" alt="Lobo Terrível">
+        <p class="image-caption">Reconstrução artística do Lobo Terrível encontrado na América do Sul</p>
+    </div>
+
+    <div class="article-content">
+        <p class="lead">Uma equipe de paleontólogos brasileiros fez uma descoberta extraordinária: fósseis de uma nova espécie de Lobo Terrível (Canis dirus) na região da Amazônia brasileira.</p>
+
+        <h2>A Descoberta</h2>
+        <p>Durante uma expedição de rotina na região norte do Brasil, pesquisadores do Museu Nacional encontraram ossos fossilizados que pertenciam a um grande predador. Após análises detalhadas, confirmou-se que se tratava de uma nova espécie de Lobo Terrível, anteriormente conhecido apenas na América do Norte.</p>
+
+        <h2>Características Únicas</h2>
+        <p>O espécime encontrado apresenta características distintas de seus parentes norte-americanos, incluindo:</p>
+        <ul>
+            <li>Estrutura óssea mais robusta</li>
+            <li>Dentes adaptados para uma dieta mais variada</li>
+            <li>Marcas de adaptação ao clima tropical</li>
+        </ul>
+
+        <h2>Implicações Científicas</h2>
+        <p>Esta descoberta revoluciona nossa compreensão sobre a distribuição geográfica dos Lobos Terríveis e sugere que eles podem ter migrado para a América do Sul muito antes do que se pensava.</p>
+
+        <blockquote>
+            "Esta descoberta muda completamente nossa compreensão sobre a evolução dos canídeos na América do Sul. O Lobo Terrível pode ter desempenhado um papel crucial no ecossistema pré-histórico da região."
+            <footer>- Dra. Ana Santos, Paleontóloga Chefe</footer>
+        </blockquote>
+
+        <h2>Próximos Passos</h2>
+        <p>A equipe de pesquisa planeja continuar as escavações na região, na esperança de encontrar mais espécimes e entender melhor o papel deste predador no ecossistema amazônico pré-histórico.</p>
+    </div>
+
+    <div class="article-comments">
+        <h3>Comentários</h3>
+        <form action="#" method="POST" class="comment-form">
+            <textarea name="comentario" placeholder="Deixe seu comentário..." required></textarea>
+            <button type="submit" class="comment-button">Enviar Comentário</button>
+        </form>
+    </div>
+</article>
+{% endblock content %} 
