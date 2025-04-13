@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block content %}
+<article class="news-article">
+    <header class="article-header">
+        <h1>Milhares de Baleias-Jubarte São Avistadas na Costa do Brasil</h1>
+        <div class="article-meta">
+            <span class="author">Por Redação EcoMarinha</span>
+            <span class="date">10 de Abril, 2025</span>
+            <span class="category">Conservação e Meio Ambiente</span>
+        </div>
+    </header>
+
+    <div class="article-image">
+        <!-- Imagem ilustrativa de baleias-jubarte -->
+        <img src="../imgs/baleia-jubarte.jpg" alt="Baleias-jubarte">
+        <p class="image-caption">Baleias-jubarte em migração próximas à costa brasileira</p>
+    </div>
+
+    <div class="article-content">
+        <p class="lead">Durante a temporada de migração, especialistas e turistas têm registrado um aumento significativo no número de baleias-jubarte ao longo da costa brasileira, confirmando a importância da região para a conservação desses gigantes do mar.</p>
+
+        <h2>A Observação</h2>
+        <p>Pesquisadores do Projeto Baleias do Atlântico vêm monitorando a presença das baleias-jubarte na região há alguns anos. Neste ano, a contagem ultrapassou as expectativas, com avistamentos que chegaram a contar milhares de exemplares próximos a praias do sul e sudeste do Brasil. A concentração de animais tem atraído não só biólogos, mas também operadores de ecoturismo, que registram imagens impressionantes desse espetáculo natural.</p>
+
+        <h2>Impacto e Conservação</h2>
+        <p>O aumento no número de avistamentos reforça a eficácia das medidas de proteção adotadas pelos governos e organizações não governamentais na região. Iniciativas voltadas à preservação dos habitats naturais, o combate à poluição marinha e o controle de atividades pesqueiras têm contribuído para a recuperação das populações de baleias. Contudo, especialistas alertam que desafios como o impacto do turismo desordenado e a pesca ilegal ainda precisam ser enfrentados.</p>
+
+        <blockquote>
+            "O cenário atual demonstra um importante avanço na recuperação das baleias-jubarte, mas é fundamental que continuemos investindo em políticas de conservação para garantir a sobrevivência desses animais a longo prazo."
+            <footer>- Dr. João Mendes, biólogo marinho do Instituto Oceânico</footer>
+        </blockquote>
+
+        <h2>O Futuro da Conservação</h2>
+        <p>Com as novas tecnologias de monitoramento e o engajamento crescente da comunidade científica e da sociedade, espera-se que a tendência de recuperação continue. Projetos de pesquisa e parcerias internacionais já estão em andamento para ampliar o conhecimento sobre os hábitos migratórios e as necessidades dessas baleias, contribuindo para a elaboração de estratégias mais eficientes de preservação ambiental.</p>
+    </div>
+
+    <div class="article-comments">
+        <h3>Comentários</h3>
+        <form action="#" method="POST" class="comment-form">
+            <textarea name="comentario" placeholder="Deixe seu comentário..." required></textarea>
+            <button type="submit" class="comment-button">Enviar Comentário</button>
+        </form>
+    </div>
+</article>
+
+<div class="comments-list">
+    {% for dadosComentarios in comentarios %}
+        <div class="comment-item">
+            <div class="comment-content">
+                <p><strong>{{ dadosComentarios.Nome}}</strong></p>
+                <p>{{ dadosComentarios.Comentário }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}

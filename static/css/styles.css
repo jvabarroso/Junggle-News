@@ -26,6 +26,11 @@ body {
     background: var(--background);
 }
 
+img{
+    height: 485px;
+    width: 740px;
+}
+
 /* Container */
 .container {
     max-width: 800px;
@@ -128,12 +133,14 @@ main > div {
 }
 
 .card-title {
+    text-align: center;
     font-size: 1.8rem;
     margin-bottom: 1rem;
     color: var(--text);
 }
 
 .card-text {
+    text-align: justify;
     color: var(--secondary);
     line-height: 1.6;
     margin-bottom: 1.5rem;
@@ -272,6 +279,31 @@ textarea {
     margin-top: 0.5rem;
 }
 
+.comments-list {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.comment-item {
+    display: flex;
+    gap: 1rem;
+    background: var(--highlight);
+    padding: 1rem;
+    border-radius: 8px;
+    align-items: flex-start;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.comment-content p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--text);
+}
+.comment-content p:first-child {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
 .like-btn, .reply-btn {
     background: none;
     border: none;
@@ -308,6 +340,67 @@ footer {
     font-size: 0.9rem;
     color: var(--text);
 }
+
+.feedback-list {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .feedback-item {
+    display: flex;
+    gap: 1rem;
+    background: var(--highlight);
+    padding: 1rem;
+    border-radius: 8px;
+    align-items: flex-start;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .feedback-avatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .feedback-content h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--text);
+  }
+  
+  .feedback-content p {
+    margin: 0.2rem 0;
+    font-size: 1rem;
+    color: var(--text);
+  }
+  
+  .news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .news-preview {
+    background: var(--highlight);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .news-preview h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.4rem;
+    color: var(--text);
+  }
+  
+  .news-preview p {
+    margin: 0.2rem 0;
+    font-size: 1rem;
+    color: var(--text);
+  }
+  
 
 /* Responsivo */
 @media (max-width: 1200px) {

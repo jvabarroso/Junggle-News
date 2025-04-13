@@ -43,4 +43,21 @@
             <button type="submit" class="feedback-button">Enviar Notícia</button>
         </form>
     </div>
+
+    <div class="news-submission">
+        <div class="news-list">
+          {% for dadosNoticias in noticias %}
+            <div class="news-preview">
+              <h3>{{ dadosNoticias.Título }}</h3>
+              <p><strong>Autor:</strong> {{ dadosNoticias.Autor }}</p>
+              <p><strong>Categoria:</strong> {{ dadosNoticias.Categoria }}</p>
+              <p><strong>Descrição:</strong> {{ dadosNoticias.Descrição }}</p>
+              <p>{{ dadosNoticias.Notícia }}</p>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      
+    
+
 {% endblock content %}

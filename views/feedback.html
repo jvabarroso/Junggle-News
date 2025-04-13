@@ -36,4 +36,22 @@
             <button type="submit" class="feedback-button">Enviar Feedback</button>
         </form>
     </div>
+
+    <div class="feedback-list">
+        {% for dadosFeedbacks in feedbacks %}
+          <div class="feedback-item">
+            <div class="feedback-avatar">
+              <img src="../imgs/avatar.png" alt="Avatar do usuário">
+            </div>
+            <div class="feedback-content">
+              <h4>{{ dadosFeedbacks.Nome }}</h4>
+              <p><strong>Sexo:</strong> {{ dadosFeedbacks.sexo }}</p>
+              <p><strong>Data de Nascimento:</strong> {{ dadosFeedbacks.DataNasc }}</p>
+              <p><strong>Email:</strong> {{ dadosFeedbacks.Email }}</p>
+              <p>{{ dadosFeedbacks.Comentário }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>      
+
 {% endblock content %}
