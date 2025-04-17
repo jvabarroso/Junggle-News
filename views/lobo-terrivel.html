@@ -43,21 +43,23 @@
 
     <div class="article-comments">
         <h3>Comentários</h3>
-        <form action="{{url_for('lobo_terrivel')}}" method="POST" class="comment-form">
+        <form action="#" method="POST" class="comment-form">
+            <input type="text" name="nome" placeholder="Seu nome" required>
             <textarea name="comentario" placeholder="Deixe seu comentário..." required></textarea>
             <button type="submit" class="comment-button">Enviar Comentário</button>
         </form>
+        <!-- Área de exibição dos comentários -->
+        <div class="comments-list">
+            {% for dadosComentarios in comentariosLobo %}
+                <div class="comment-item">
+                    <div class="comment-content">
+                        <p><strong>{{ dadosComentarios.Nome}}</strong></p>
+                        <p>{{ dadosComentarios.Comentário }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 </article>
 
-<div class="comments-list">
-    {% for dadosComentarios in comentarios %}
-        <div class="comment-item">
-            <div class="comment-content">
-                <p><strong>{{ dadosComentarios.Nome}}</strong></p>
-                <p>{{ dadosComentarios.Comentário }}</p>
-            </div>
-        </div>
-    {% endfor %}
-</div>
 {% endblock content %} 

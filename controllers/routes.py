@@ -1,6 +1,12 @@
 from flask import render_template, request 
 
-comentarios = [{'Nome':'',
+comentariosAbelha = [{'Nome':'',
+                'Comentário':''}]
+comentariosBaleia = [{'Nome':'',
+                'Comentário':''}]
+comentariosLobo = [{'Nome':'',
+                'Comentário':''}]
+comentariosTigre = [{'Nome':'',
                 'Comentário':''}]
 
 feedbacks = [{'Nome':'Igor',
@@ -22,39 +28,39 @@ def init_app(app):
     
     @app.route('/baleias', methods=['GET', 'POST'])
     def noticia():
-        dadosComentarios = comentarios[0]
+        dadosComentarios = comentariosBaleia[0]
         if request.method == 'POST':
             if request.form.get('comentario') and request.form.get('nome'):
-                comentarios.append({'Nome': request.form.get('nome'),
+                comentariosBaleia.append({'Nome': request.form.get('nome'),
                                     'Comentário': request.form.get('comentario')})
-        return render_template('baleias.html', dadosComentarios=dadosComentarios, comentarios=comentarios)
+        return render_template('baleias.html', dadosComentarios=dadosComentarios, comentariosBaleia=comentariosBaleia)
     
     @app.route('/abelhas', methods=['GET', 'POST'])
     def abelhas():
-        dadosComentarios = comentarios[0]
+        dadosComentarios = comentariosAbelha[0]
         if request.method == 'POST':
             if request.form.get('comentario') and request.form.get('nome'):
-                comentarios.append({'Nome': request.form.get('nome'),
+                comentariosAbelha.append({'Nome': request.form.get('nome'),
                                     'Comentário': request.form.get('comentario')})
-        return render_template('abelhas.html', dadosComentarios=dadosComentarios, comentarios=comentarios)
+        return render_template('abelhas.html', dadosComentarios=dadosComentarios, comentariosAbelha=comentariosAbelha)
     
     @app.route('/tigres', methods=['GET', 'POST'])
     def tigres():
-        dadosComentarios = comentarios[0]
+        dadosComentarios = comentariosTigre[0]
         if request.method == 'POST':
            if request.form.get('comentario') and request.form.get('nome'):
-                comentarios.append({'Nome': request.form.get('nome'),
+                comentariosTigre.append({'Nome': request.form.get('nome'),
                                     'Comentário': request.form.get('comentario')})
-        return render_template('tigres.html', dadosComentarios=dadosComentarios, comentarios=comentarios)
+        return render_template('tigres.html', dadosComentarios=dadosComentarios, comentariosTigre=comentariosTigre)
     
     @app.route('/lobo-terrivel', methods=['GET', 'POST'])
     def lobo_terrivel():
-        dadosComentarios = comentarios[0]
+        dadosComentarios = comentariosLobo[0]
         if request.method == 'POST':
            if request.form.get('comentario') and request.form.get('nome'):
-                comentarios.append({'Nome': request.form.get('nome'),
+                comentariosLobo.append({'Nome': request.form.get('nome'),
                                     'Comentário': request.form.get('comentario')})
-        return render_template('lobo-terrivel.html', dadosComentarios=dadosComentarios, comentarios=comentarios)
+        return render_template('lobo-terrivel.html', dadosComentarios=dadosComentarios, comentariosLobo=comentariosLobo)
     
     @app.route('/feedback', methods=['GET', 'POST'])
     def feedback():

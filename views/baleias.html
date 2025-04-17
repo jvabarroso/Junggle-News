@@ -34,24 +34,25 @@
         <p>Com as novas tecnologias de monitoramento e o engajamento crescente da comunidade científica e da sociedade, espera-se que a tendência de recuperação continue. Projetos de pesquisa e parcerias internacionais já estão em andamento para ampliar o conhecimento sobre os hábitos migratórios e as necessidades dessas baleias, contribuindo para a elaboração de estratégias mais eficientes de preservação ambiental.</p>
     </div>
 
-    <div class="article-comments">
-        <h3>Comentários</h3>
-        <form action="#" method="POST" class="comment-form">
-            <textarea name="comentario" placeholder="Deixe seu comentário..." required></textarea>
-            <button type="submit" class="comment-button">Enviar Comentário</button>
-        </form>
-    </div>
-</article>
-
-<div class="comments-list">
-    {% for dadosComentarios in comentarios %}
-        <div class="comment-item">
-            <div class="comment-content">
-                <p><strong>{{ dadosComentarios.Nome}}</strong></p>
-                <p>{{ dadosComentarios.Comentário }}</p>
+<div class="article-comments">
+    <h3>Comentários</h3>
+    <form action="#" method="POST" class="comment-form">
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <textarea name="comentario" placeholder="Deixe seu comentário..." required></textarea>
+        <button type="submit" class="comment-button">Enviar Comentário</button>
+    </form>
+    <!-- Área de exibição dos comentários -->
+    <div class="comments-list">
+        {% for dadosComentarios in comentariosBaleia %}
+            <div class="comment-item">
+                <div class="comment-content">
+                    <p><strong>{{ dadosComentarios.Nome}}</strong></p>
+                    <p>{{ dadosComentarios.Comentário }}</p>
+                </div>
             </div>
-        </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
 </div>
+</article>
 
 {% endblock content %}
