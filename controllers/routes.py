@@ -2,12 +2,16 @@ from flask import render_template, request
 
 comentariosAbelha = [{'Nome':'',
                 'Comentário':''}]
+
 comentariosBaleia = [{'Nome':'',
                 'Comentário':''}]
+
 comentariosLobo = [{'Nome':'',
                 'Comentário':''}]
+
 comentariosTigre = [{'Nome':'',
                 'Comentário':''}]
+
 
 feedbacks = [{'Nome':'Igor',
              'DataNasc':'',
@@ -81,7 +85,7 @@ def init_app(app):
             if request.form.get('titulo') and request.form.get('autor') and request.form.get('categoria') and request.form.get('descricao') and request.form.get('noticia'):
                 noticias.append({'Título': request.form.get('titulo'),
                                  'Autor': request.form.get('autor'),
-                                 'Categoria': request.form.get('Categoria'),
+                                 'Categoria': request.form.get('categoria'),
                                  'Descrição': request.form.get('descricao'),
                                  'Notícia': request.form.get('noticia'),
                                  })
