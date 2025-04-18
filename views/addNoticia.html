@@ -44,20 +44,23 @@
         </form>
     </div>
 
-    <div class="news-submission">
-        <div class="news-list">
-          {% for dadosNoticias in noticias %}
-            <div class="news-preview">
-              <h3>{{ dadosNoticias.Título }}</h3>
-              <p><strong>Autor:</strong> {{ dadosNoticias.Autor }}</p>
-              <p><strong>Categoria:</strong> {{ dadosNoticias.Categoria }}</p>
-              <p><strong>Descrição:</strong> {{ dadosNoticias.Descrição }}</p>
-              <p>{{ dadosNoticias.Notícia }}</p>
-            </div>
-          {% endfor %}
-        </div>
-      </div>
-      
-    
+    <div class="news-section">
+        <h2 class="section-title">Notícias Publicadas</h2>
+        {% for dadosNoticias in noticias %}
+        <article class="news-article">
+            <header class="article-header">
+                <h1>{{ dadosNoticias.Título }}</h1>
+                <div class="article-meta">
+                    <span class="author">Por {{ dadosNoticias.Autor }}</span>
+                    <span class="category">{{ dadosNoticias.Categoria }}</span>
+                </div>
+            </header>
 
+            <div class="article-content">
+                <p class="lead">{{ dadosNoticias.Descrição }}</p>
+                <p>{{ dadosNoticias.Notícia }}</p>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
 {% endblock content %}

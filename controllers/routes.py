@@ -13,7 +13,7 @@ comentariosTigre = [{'Nome':'',
                 'Comentário':''}]
 
 
-feedbacks = [{'Nome':'Igor',
+feedbacks = [{'Nome':'',
              'DataNasc':'',
              'Sexo': '',
              'Email': '',

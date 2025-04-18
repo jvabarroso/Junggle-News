@@ -37,21 +37,24 @@
         </form>
     </div>
 
-    <div class="feedback-list">
-        {% for dadosFeedbacks in feedbacks %}
-          <div class="feedback-item">
-            <div class="feedback-avatar">
-              <img src="../imgs/avatar.png" alt="Avatar do usuário">
-            </div>
-            <div class="feedback-content">
-              <h4>{{ dadosFeedbacks.Nome }}</h4>
-              <p><strong>Sexo:</strong> {{ dadosFeedbacks.sexo }}</p>
-              <p><strong>Data de Nascimento:</strong> {{ dadosFeedbacks.DataNasc }}</p>
-              <p><strong>Email:</strong> {{ dadosFeedbacks.Email }}</p>
-              <p>{{ dadosFeedbacks.Comentário }}</p>
-            </div>
-          </div>
-        {% endfor %}
-      </div>      
-
+    <div class="feedback-section">
+        <h2 class="section-title">Feedbacks Recebidos</h2>
+        <div class="feedback-list">
+            {% for dadosFeedbacks in feedbacks %}
+              <div class="feedback-item">
+                <div class="feedback-content">
+                  <div class="feedback-header">
+                    <h4>{{ dadosFeedbacks.Nome }}</h4>
+                    <span class="feedback-date">{{ dadosFeedbacks.DataNasc }}</span>
+                  </div>
+                  <div class="feedback-info">
+                    <span class="feedback-gender">{{ dadosFeedbacks.Sexo }}</span>
+                    <span class="feedback-email">{{ dadosFeedbacks.Email }}</span>
+                  </div>
+                  <p class="feedback-text">{{ dadosFeedbacks.Comentário }}</p>
+                </div>
+              </div>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock content %}
